@@ -1,0 +1,5 @@
+{
+    "require": {
+        "aranyasen/hl7": "^2.1"
+    }
+}
