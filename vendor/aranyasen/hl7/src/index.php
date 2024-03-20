@@ -22,10 +22,10 @@ $hl7Message->addSegment(new HL7\Segments\MSH([
 ]));
 
 $hl7Message->addSegment(new HL7\Segments\PID([
-    '1',
+    '2',
     '123',
-    'Chebicheb',
-    'Kheireddine',
+    'ahmed',
+    'chikhawi',
     '',
     '20011212',
     'M'
@@ -52,7 +52,7 @@ foreach ($hl7Message->getSegments() as $segment) {
 error_log("HL7 message sent: $hl7String");
 
 // Define the CT scan machine's IP address and port
-$ctMachineIP = '192.168.114.128';
+$ctMachineIP = '192.168.206.128';
 $ctMachinePort = 3306;
 
 // Create a socket connection to the CT scan machine
@@ -73,4 +73,3 @@ if ($socket === false) {
     // Close the socket connection
     socket_close($socket);
 }
-?>
